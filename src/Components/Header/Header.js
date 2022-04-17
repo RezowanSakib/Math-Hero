@@ -7,13 +7,13 @@ const Header = () => {
   return (
     <div className="App">
       <Navbar
-        fixed="top"
+        sticky="top"
         collapseOnSelect
         expand="lg"
         bg="dark"
         variant="dark"
       >
-        <Container >
+        <Container>
           <Navbar.Brand as={Link} to="/">
             <img src={logo} className="img-fluid rounded" alt="" />
           </Navbar.Brand>
