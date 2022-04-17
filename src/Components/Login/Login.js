@@ -26,7 +26,7 @@ if (user) {
   return (
     <div className="container">
       <div className="row">
-        <Form className="col-md-4" onSubmit={handleLogin}>
+        <Form className="col-md-4  mx-auto " onSubmit={handleLogin}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
             <Form.Control

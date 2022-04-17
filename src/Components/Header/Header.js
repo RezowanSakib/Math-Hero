@@ -12,9 +12,9 @@ const Header = () => {
     signOut(auth);
   };
   return (
-    <div className="App">
+    <div className="App sticky-top">
       <Navbar
-        sticky="top"
+        
         collapseOnSelect
         expand="lg"
         bg="dark"

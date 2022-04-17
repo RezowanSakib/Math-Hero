@@ -31,28 +31,32 @@ const Register = () => {
   return (
     <div className="register-form">
       <h2 style={{ textAlign: "center" }}>Please Register</h2>
-      <form onSubmit={handleRegister}>
-        <input type="text" name="name" id="" placeholder="Your Name" />
+      <div className="row">
+        
+        <form onSubmit={handleRegister} className='col-md-6 mx-auto'>
+          <input type="text" name="name" id="" placeholder="Your Name" />
 
-        <input
-          type="email"
-          name="email"
-          id="emailId"
-          placeholder="Email Address"
-          required
-          onBlur={(e) => setEmail(e.target.value)}
-        />
+          <input
+            type="email"
+            name="email"
+            id="emailId"
+            placeholder="Email Address"
+            required
+            onBlur={(e) => setEmail(e.target.value)}
+          />
 
-        <input
-          type="password"
-          name="password"
-          id="passId"
-          placeholder="Password"
-          required
-          onBlur={(e) => setPassword(e.target.value)}
-        />
-        <input disabled={!agree} type="submit" value="Register" />
-      </form>
+          <input
+            type="password"
+            name="password"
+            id="passId"
+            placeholder="Password"
+            required
+            onBlur={(e) => setPassword(e.target.value)}
+          />
+          <input disabled={!agree} type="submit" value="Register" />
+        </form>
+      </div>
+
       <p>
         Already have an account?
         <Link
