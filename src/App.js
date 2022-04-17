@@ -10,6 +10,7 @@ import NotFound from "./Components/NotFound/NotFound";
 import Blogs from "./Components/Blogs/Blogs";
 import CheckOut from "./Components/Checkout/CheckOut";
 import Login from "./Components/Login/Login";
+import Register from "./Components/Register/Register";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           path="/course/:serviceID"
           element={<CheckOut></CheckOut>}
         ></Route>
+        <Route path="/register" element={<Register></Register>}></Route>
 
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/courses" element={<Courses></Courses>}></Route>
