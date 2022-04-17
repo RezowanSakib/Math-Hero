@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import "./Register.css";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import Google from "../Google/Google";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -75,6 +76,7 @@ const Register = () => {
       >
         Accept all Term and Conditions
       </label>
+      <Google></Google>
     </div>
   );
 };

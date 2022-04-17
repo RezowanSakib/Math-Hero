@@ -41,10 +41,12 @@ const Header = () => {
               </Nav.Link>
             </Nav>
 
-            {user ? (
+            {user ? (<Nav>
               <Nav.Link onClick={handleSignOut}>
               Sign Out
             </Nav.Link>
+            <p className="text-white">{user.email}</p>
+            </Nav>
             ) : (
               <Nav>
                 <Nav.Link as={Link} to="/login">
@@ -55,10 +57,7 @@ const Header = () => {
                 </Nav.Link>
               </Nav>
             )}
-            {/* <Nav.Link onClick={handleSignOut}>
-                Sign Out
-              </Nav.Link>
-               */}
+        
           </Navbar.Collapse>
         </Container>
       </Navbar>

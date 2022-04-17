@@ -3,6 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
+import Google from "../Google/Google";
 const Login = () => {
  
 const [signInWithEmailAndPassword, user, loading, error] =
@@ -60,6 +61,7 @@ if (user) {
           </p>
         </Form>
       </div>
+      <Google></Google>
     </div>
   );
 };
