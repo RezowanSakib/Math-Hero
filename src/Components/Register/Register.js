@@ -4,13 +4,15 @@ import auth from "../../firebase.init";
 import "./Register.css";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import Google from "../Google/Google";
+import { useSendEmailVerification } from "react-firebase-hooks/auth";
 
 const Register = () => {
   const navigate = useNavigate();
   const navigateLogin = (event) => {
     navigate("/register");
   };
-  
+  const [sendEmailVerification, sending] = useSendEmailVerification(auth);
+
   const [email, setEmail] = useState("");
   const [agree, setAgree] = useState(false);
   const [password, setPassword] = useState("");
@@ -19,14 +21,13 @@ const Register = () => {
   const handleRegister = (event) => {
     event.preventDefault();
 
-   
     const email = event.target.email.value;
     const password = event.target.password.value;
     if (agree) {
       createUserWithEmailAndPassword(email, password);
     }
   };
- 
+
   if (user) {
     navigate("/");
   }
@@ -35,7 +36,13 @@ const Register = () => {
       <h2 style={{ textAlign: "center" }}>Please Register</h2>
       <div className="row">
         <form onSubmit={handleRegister} className="col-md-6 mx-auto">
-          <input type="text" name="name" id="" placeholder="Your Name"  required/>
+          <input
+            type="text"
+            name="name"
+            id=""
+            placeholder="Your Name"
+            required
+          />
 
           <input
             type="email"
@@ -54,7 +61,17 @@ const Register = () => {
             required
             onBlur={(e) => setPassword(e.target.value)}
           />
-          <input disabled={!agree} type="submit" className="rounded bg-primary text-white" value="Register" />
+          <input
+            disabled={!agree}
+            type="submit"
+            className="rounded bg-primary text-white"
+            value="Register"
+          />
+          <button
+           
+          >
+            Verify email
+          </button>
         </form>
       </div>
 
@@ -82,10 +99,10 @@ const Register = () => {
         Accept all Term and Conditions
       </label>
       <p className="text-danger">
-          {error?.message}
-          {error?.message}
-        </p>
-      
+        {error?.message}
+        {error?.message}
+      </p>
+
       <Google></Google>
     </div>
   );

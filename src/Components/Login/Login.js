@@ -1,13 +1,21 @@
 import React, { useRef, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
-import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword} from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import Google from "../Google/Google";
+
+
+  import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+import { async } from "@firebase/util";
 const Login = () => {
  
 const [signInWithEmailAndPassword, user, loading, error] =
   useSignInWithEmailAndPassword(auth);
+  const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
+    auth
+  );
 const emailRef = useRef("");
 const passRef = useRef("");
 const navigate = useNavigate();
@@ -20,11 +28,17 @@ const handleLogin = (event) => {
 const navigateRegister = (event) => {
   navigate("/register");
 };
+const resetPass=async ()=>{
+  const email = emailRef.current.value;
+  await sendPasswordResetEmail(email);
+   toast('mailsent')
+}
 if (user) {
   navigate("/");
 }
   return (
     <div className="container">
+      <ToastContainer></ToastContainer>
       <div className="row">
         <Form className="col-md-4  mx-auto " onSubmit={handleLogin}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -54,9 +68,10 @@ if (user) {
             Login
           </Button>
           <p className="text-danger">
-          Error: {error?.message}
+          
           {error?.message}
         </p>
+        <p>Forgate password?<button className="btn-md bg-danger" onClick={resetPass}>ResetPass</button></p>
           <p>
             New to MathHero?
             <Link to="/register" onClick={navigateRegister}>

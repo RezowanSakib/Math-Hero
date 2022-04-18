@@ -5,7 +5,7 @@ import auth from "../../firebase.init";
 
 const Google = () => {
   const navigate = useNavigate();
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, user, error] = useSignInWithGoogle(auth);
   
 
   if (user) {
@@ -15,8 +15,8 @@ const Google = () => {
     return (
       <div>
         <p className="text-danger">
-          Error: {error?.message}
           {error?.message}
+         
         </p>
         <button
           className="btn-secondary rounded"
@@ -26,7 +26,7 @@ const Google = () => {
         </button>
       </div>
     );
-  }
+  } else{
   return (
     <div>
       <button
@@ -36,7 +36,7 @@ const Google = () => {
         Sign In
       </button>
     </div>
-  );
+  );}
 };
 
 export default Google;
