@@ -3,63 +3,63 @@
     "id": "1",
     "img": "./services/img1.jpg",
     "price": 134,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, enim.",
+    "description": "You can learn Differential  by Enrolling this Course.I will guid you as a tutor.This is a crash Course.This course Will be running in next 4 month. If you looking for a tutor then plz enroll.It will be my Pleasure",
     "name": "Differential"
   },
   {
     "id": "2",
     "img": "./services/img2.jpg",
     "price": 120,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, enim.",
+    "description": "This is a crash Course.This course Will be running in next 3 month",
     "name": "Analytic and Vector Geometry"
   },
   {
     "id": "3",
     "img": "./services/img3.jpg",
     "price": 125,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, enim.",
+    "description": "Advance Calculus is one of the part of 1st year student study .",
     "name": "Advance Calculus"
   },
   {
     "id": "4",
     "img": "./services/img4.jpg",
     "price": 123,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, enim.",
+    "description": "You can learn Linear Algebra  by Enrolling this Course.I will guid you as a tutor",
     "name": "Linear Algebra"
   },
   {
     "id": "5",
     "img": "./services/img5.jpg",
     "price": 137,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, enim.",
+    "description": "This is a crash Course.This course Will be running in next 3 month.",
     "name": "Force"
   },
   {
     "id": "6",
     "img": "./services/img6.jpg",
     "price": 133,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, enim.",
+    "description": "This is a crash Course.This course Will be running in next 4 month.",
     "name": "Fundamental of Math"
   },
   {
     "id": "7",
     "img": "./services/img7.jpg",
     "price": 175,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, enim.",
+    "description": "This course is design for HSC candidates. If you looking for a tutor then plz enroll",
     "name": "HSC Math Course"
   },
   {
     "id": "8",
     "img": "./services/img8.jpg",
     "price": 110,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, enim.",
+    "description": "This course is design for SSC candidates. If you looking for a tutor then plz enroll.",
     "name": "SSC Math Course"
   },
   {
     "id": "9",
     "img": "./services/img9.jpg",
     "price": 130,
-    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, enim.",
+    "description": "This is a crash Course.This course Will be running in next 4 month.",
     "name": "SSC Higher Math Course"
   }
 ]

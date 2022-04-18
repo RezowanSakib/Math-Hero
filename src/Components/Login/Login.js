@@ -53,6 +53,10 @@ if (user) {
           <Button variant="primary" type="submit">
             Login
           </Button>
+          <p className="text-danger">
+          Error: {error?.message}
+          {error?.message}
+        </p>
           <p>
             New to MathHero?
             <Link to="/register" onClick={navigateRegister}>

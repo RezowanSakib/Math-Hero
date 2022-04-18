@@ -10,6 +10,7 @@ const Register = () => {
   const navigateLogin = (event) => {
     navigate("/register");
   };
+  
   const [email, setEmail] = useState("");
   const [agree, setAgree] = useState(false);
   const [password, setPassword] = useState("");
@@ -18,13 +19,14 @@ const Register = () => {
   const handleRegister = (event) => {
     event.preventDefault();
 
-    const name = event.target.name.value;
+   
     const email = event.target.email.value;
     const password = event.target.password.value;
     if (agree) {
       createUserWithEmailAndPassword(email, password);
     }
   };
+ 
   if (user) {
     navigate("/");
   }
@@ -32,9 +34,8 @@ const Register = () => {
     <div className="register-form">
       <h2 style={{ textAlign: "center" }}>Please Register</h2>
       <div className="row">
-        
-        <form onSubmit={handleRegister} className='col-md-6 mx-auto'>
-          <input type="text" name="name" id="" placeholder="Your Name" />
+        <form onSubmit={handleRegister} className="col-md-6 mx-auto">
+          <input type="text" name="name" id="" placeholder="Your Name"  required/>
 
           <input
             type="email"
@@ -53,7 +54,7 @@ const Register = () => {
             required
             onBlur={(e) => setPassword(e.target.value)}
           />
-          <input disabled={!agree} type="submit" value="Register" />
+          <input disabled={!agree} type="submit" className="rounded bg-primary text-white" value="Register" />
         </form>
       </div>
 
@@ -80,6 +81,11 @@ const Register = () => {
       >
         Accept all Term and Conditions
       </label>
+      <p className="text-danger">
+          {error?.message}
+          {error?.message}
+        </p>
+      
       <Google></Google>
     </div>
   );

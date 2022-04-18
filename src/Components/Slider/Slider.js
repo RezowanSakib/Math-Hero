@@ -15,7 +15,7 @@ const Slider = () => {
             alt="First slide"
           />
           <Carousel.Caption>
-            <h3>First slide label</h3>
+            <h3>Learn Effectively</h3>
             <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -27,7 +27,7 @@ const Slider = () => {
           />
 
           <Carousel.Caption>
-            <h3>Second slide label</h3>
+            <h3>Learn New technology</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </Carousel.Caption>
         </Carousel.Item>
@@ -39,7 +39,7 @@ const Slider = () => {
           />
 
           <Carousel.Caption>
-            <h3>Third slide label</h3>
+            <h3> Read More and More </h3>
             <p>
               Praesent commodo cursus magna, vel scelerisque nisl consectetur.
             </p>

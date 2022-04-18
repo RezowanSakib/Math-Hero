@@ -6,7 +6,7 @@ const Courses = () => {
   const { courses } = useCourses();
  
   return (
-    <div className="container">
+    <div className="container bg-light">
       <h3>All Courses({courses.length})</h3>
       <div className="row g-5 mt-4">
         {courses.map((course) => (
